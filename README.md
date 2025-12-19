@@ -56,11 +56,13 @@ This repository contains implementations for 14 Computer Networks lab assignment
 - `assignment_04.pcapng` - Captured packet file
 - `headerFields.md` - L2/L3/L4 header field analysis
 - `timeDiagram.md` - Protocol sequence documentation
-- `timeDiagram.pdf` - Visual time diagram
+- `timeDiagram.png` - Visual time diagram
 - `headerAnalysis.png` - Header structure analysis
 
 **Visual Analysis**:
+![Time Diagram](assignment_04/timeDiagram.png)
 ![Header Analysis](assignment_04/headerAnalysis.png)
+
 
 **Key Learning**: Understanding packet capture, protocol headers (Ethernet, IP, ICMP), and packet flow analysis
 
@@ -214,9 +216,10 @@ This repository contains implementations for 14 Computer Networks lab assignment
 
 **Implementation**:
 - `leaf_spine_topology.py` - Main leaf-spine topology implementation
-- `test_topology.py` - Topology testing script
-- `examples.py` - Usage examples and demonstrations
-- `README.md` - Topology documentation and scaling guide
+- `visualizer.py` - Topology visualization script
+
+**Output**:
+![Leaf-Spine Topology Demo](assignment_14/screenshot_14.png)
 
 **Features**:
 - Scalable with increasing switch radix
@@ -224,76 +227,3 @@ This repository contains implementations for 14 Computer Networks lab assignment
 - Fat-tree topology reference implementation
 
 ---
-
-## Key Technologies and Concepts Covered
-
-### Programming Languages & Libraries
-- **C Programming**: Socket programming, threading, raw sockets
-- **Python**: Mininet API, network topology creation
-- **Libraries**: pthread, math.h, time.h, socket libraries
-
-### Network Protocols
-- **TCP**: Connection-oriented communication, reliability
-- **UDP**: Connectionless communication, packet loss handling
-- **ICMP**: Network diagnostics, timestamp messages
-- **Raw Sockets**: Custom packet generation
-
-### Tools & Technologies
-- **Mininet**: Network emulation and testing
-- **Wireshark**: Packet capture and analysis
-- **Iperf**: Bandwidth testing
-- **D-ITG**: Traffic generation
-
-### Security Concepts
-- **DDoS Attacks**: SYN flood, ICMP flood
-- **Packet Analysis**: Header extraction, protocol identification
-- **Network Simulation**: Traffic analysis and monitoring
-
-### Network Programming Concepts
-- **Multi-threading**: Concurrent client handling
-- **File Transfer**: Upload/download mechanisms
-- **Real-time Communication**: Chat systems
-- **Traffic Generation**: Performance testing
-
----
-
-## How to Run
-
-Each assignment folder contains the necessary source files and can be compiled using:
-```bash
-gcc -o program_name source_file.c -lm -lpthread
-```
-
-For Mininet-based assignments:
-```bash
-sudo mn --custom topology_file.py --topo topology_name
-```
-
-For packet capture:
-```bash
-sudo wireshark  # or tshark for command line
-```
-
----
-
-## Repository Structure
-```
-cnLab/
-├── assignment_01/ - Basic TCP Socket Programming
-├── assignment_02/ - TCP Fruit Store Server
-├── assignment_03/ - UDP Fruit Store Server
-├── assignment_04/ - Wireshark Packet Analysis
-├── assignment_05/ - Traffic Generation Tools
-├── assignment_06/ - TCP Traffic Analysis
-├── assignment_07/ - UDP Scientific Calculator
-├── assignment_08/ - Multi-threaded Chat Server
-├── assignment_09/ - File Transfer System
-├── assignment_10/ - Raw Socket Programming
-├── assignment_11/ - TCP SYN Flood Attack
-├── assignment_12/ - ICMP Flood Attack
-├── assignment_13/ - Packet Analysis with Topology
-├── assignment_14/ - Custom Leaf-Spine Topology
-└── README.md - This comprehensive guide
-```
-
-Each assignment demonstrates progressive learning in computer networks, from basic socket programming to advanced topics like network security, protocol analysis, and custom topology creation.
